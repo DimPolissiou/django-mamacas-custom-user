@@ -1,0 +1,6 @@
+__pycache__/
+mamacasvenv/
+settings.py
+db.sqlite3
+media
+static
