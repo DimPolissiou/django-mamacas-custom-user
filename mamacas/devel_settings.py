@@ -23,5 +23,10 @@ copyfile(example_path, settings_path)
 
 key = generate()
 replace_string = 'Enter your secret key here!'
-replaceAll(settings_path, replace_string,key)
+replaceAll(settings_path, replace_string, key)
 
+par_dir = os.path.dirname(dir_name)
+nginx_conf_filename = "nginx.conf"
+nginx_conf_path = os.path.join(par_dir, nginx_conf_filename)
+replace_path = "/home/{your project path}"
+replaceAll(nginx_conf_path, replace_path, str(par_dir))
