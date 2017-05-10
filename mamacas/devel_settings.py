@@ -30,3 +30,7 @@ nginx_conf_filename = "nginx.conf"
 nginx_conf_path = os.path.join(par_dir, nginx_conf_filename)
 replace_path = "/home/{your project path}"
 replaceAll(nginx_conf_path, replace_path, str(par_dir))
+
+uwsgi_ini_filename = "uwsgi.ini"
+uwsgi_ini_path = os.path.join(par_dir, uwsgi_ini_filename)
+replaceAll(uwsgi_ini_path, replace_path, str(par_dir))
