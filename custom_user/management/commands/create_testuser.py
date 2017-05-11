@@ -6,7 +6,7 @@ class Command(BaseCommand):
 	help = 'Creates a user for testing'
 
 	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
+		super(Command,self).__init__(*args, **kwargs)
 		self.UserModel = get_user_model()
 
 	def handle(self, *args, **options):
