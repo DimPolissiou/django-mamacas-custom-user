@@ -34,3 +34,7 @@ replaceAll(nginx_conf_path, replace_path, str(par_dir))
 uwsgi_ini_filename = "uwsgi.ini"
 uwsgi_ini_path = os.path.join(par_dir, uwsgi_ini_filename)
 replaceAll(uwsgi_ini_path, replace_path, str(par_dir))
+
+gunicorn_service_filename = "gunicorn.service"
+gunicorn_service_path = os.path.join(par_dir, gunicorn_service_filename)
+replaceAll(gunicorn_service_path, replace_path, str(par_dir))
