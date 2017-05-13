@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/home/{your project path}
+ExecStart=/home/{your project path}/venv/bin/gunicorn --workers 3 --bind unix:/home/{your project path}/mamacas.sock mamacas.wsgi
+
+[Install]
+WantedBy=multi-user.target
